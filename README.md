@@ -1,2 +1,420 @@
 # Feliz-cumplea-os-mi-amor-
 Tarjeta de cumpleaños para mi ser querido 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Cumpleaños ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#070707,#111,#1b1b1b);
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+#intro{
+
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:100;
+
+animation:intro 5s forwards;
+
+}
+
+.logo{
+
+font-size:60px;
+font-weight:700;
+letter-spacing:10px;
+color:white;
+opacity:0;
+
+animation:logo 4s forwards;
+
+}
+
+.logo span{
+color:#e50914;
+}
+
+@keyframes logo{
+
+0%{
+opacity:0;
+transform:scale(.5);
+}
+
+30%{
+opacity:1;
+}
+
+70%{
+transform:scale(1.1);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+@keyframes intro{
+
+0%,80%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+.card{
+
+width:90%;
+max-width:700px;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+text-align:center;
+
+color:white;
+
+opacity:0;
+
+transform:translateY(50px);
+
+animation:mostrar 2s forwards;
+animation-delay:4.8s;
+
+}
+
+@keyframes mostrar{
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+margin-bottom:15px;
+
+color:#ffd8d8;
+
+}
+
+h2{
+
+font-size:30px;
+
+margin-bottom:25px;
+
+font-weight:300;
+
+}
+
+p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#eeeeee;
+
+}
+
+.heart{
+
+font-size:40px;
+
+margin-top:25px;
+
+animation:latido 1.4s infinite;
+
+}
+
+@keyframes latido{
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+}
+
+button{
+
+margin-top:35px;
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4d6d;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:#ff6b87;
+
+}
+
+#mensaje{
+
+display:none;
+
+margin-top:30px;
+
+animation:fade 1s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.fondo{
+
+position:fixed;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.circle{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.06);
+
+animation:flotar linear infinite;
+
+}
+
+.circle:nth-child(1){
+
+width:220px;
+height:220px;
+left:10%;
+top:70%;
+animation-duration:15s;
+
+}
+
+.circle:nth-child(2){
+
+width:140px;
+height:140px;
+right:10%;
+top:10%;
+animation-duration:12s;
+
+}
+
+.circle:nth-child(3){
+
+width:300px;
+height:300px;
+left:65%;
+top:60%;
+animation-duration:18s;
+
+}
+
+@keyframes flotar{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-40px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="intro">
+
+<div class="logo">
+
+Nuestra <span>Historia</span>
+
+</div>
+
+</div>
+
+<div class="fondo">
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+</div>
+
+<div class="card">
+
+<h1>Feliz Cumpleaños</h1>
+
+<h2>Mi Amor ❤️</h2>
+
+<p>
+
+Hoy celebramos el regalo más hermoso que la vida me dio: tú.
+
+Gracias por ser mi compañero, mi fuerza, mi paz y el lugar donde siempre quiero volver.
+
+Cada recuerdo contigo se ha convertido en un tesoro y cada nuevo día a tu lado es una bendición que jamás dejaré de agradecer.
+
+</p>
+
+<button onclick="abrir()">
+
+Abrir mi carta
+
+</button>
+
+<div id="mensaje">
+
+<p>
+
+Mi amor,
+
+Hoy quiero recordarte cuánto significas para mí.
+
+Eres la persona que llena mi vida de felicidad, esperanza y amor.
+
+Admiro tu fortaleza, tu corazón y la forma en que haces que incluso los días más simples se conviertan en momentos inolvidables.
+
+Deseo que este nuevo año de vida esté lleno de salud, éxitos, sueños cumplidos y muchísimas sonrisas.
+
+Prometo seguir caminando a tu lado, apoyándote, amándote y creando recuerdos que duren toda la vida.
+
+Gracias por existir.
+
+Gracias por elegirme.
+
+Y gracias por regalarme el privilegio de compartir mi vida contigo.
+
+❤️
+
+Feliz cumpleaños, mi amor.
+
+Con todo mi corazón...
+
+Te amo infinitamente.
+
+</p>
+
+<div class="heart">
+
+❤️
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function abrir(){
+
+document.getElementById("mensaje").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
